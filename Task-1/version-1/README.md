@@ -9,7 +9,7 @@ you have to process a file of more than 1 million customers have to store custom
 Duration: 6 hours Notes: ● You can not use any third-party library. If we find any piece of code copied from any source which is available online, you will be disqualified. ● We shared a file for you, you have to download and process it. ● Download the file here 1M-customers.txt (https://drive.google.com/file/d/13NuIZEuNMjfgCy9mxlb3Yp-5poPR-CW-) ● You must follow the code standard and proper method definition based on process action. ● Code documentation is preferable. ● The customer's phone number & email from the file must be validated in your process. ● Some examples of valid us phone number format 555-555-5555, (555)555-5555, (555) 555-5555, 555 555 5555, 5555555555, 1 555 555 5555
 
 
-### Change Log in version-1:
+### Changelog in version-1:
 
 1. Enhanced implementation.
 2. More faster than ever
