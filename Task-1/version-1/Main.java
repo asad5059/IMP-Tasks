@@ -18,8 +18,8 @@ public class Main {
             }
 
             // Create sets to hold valid and invalid data
-            List<String> valid = new ArrayList<>();
-            List<String> invalid = new ArrayList<>();
+            Set<String> valid = new HashSet<>();
+            Set<String> invalid = new HashSet<>();
 
             // Create and start worker threads
             List<customerHandler> cus = new ArrayList<>();
@@ -88,10 +88,10 @@ public class Main {
     private static class customerHandler extends Thread {
 
         private List<String> inputList;
-        private List<String> valid;
-        private List<String> invalid;
+        private Set<String> valid;
+        private Set<String> invalid;
 
-        public customerHandler(List<String> inputList, List<String> valid, List<String> invalid) {
+        public customerHandler(List<String> inputList, Set<String> valid, Set<String> invalid) {
             this.inputList = inputList;
             this.valid = valid;
             this.invalid = invalid;
@@ -113,8 +113,7 @@ public class Main {
 
         private boolean isValid(String s) {
             customer c = new customer(s);
-            if(c.isValid) return true;
-            return false;
+            return c.isValid;
         }
     }
 }
@@ -134,12 +133,9 @@ class customer
             cleanedNumber = cleanedNumber.substring(1,cleanedNumber.length());
         }
 
-        if (cleanedNumber.length() != 10) {
-            return false;
-        }
+        return cleanedNumber.length() == 10;
 
         // All checks passed, so the phone number is valid
-        return true;
     }
     boolean validateEmail(String email) {
 
@@ -171,12 +167,9 @@ class customer
         // Check that the email contains at least one period and one non-period character after the @ symbol
         int atSymbolIndex = email.indexOf('@');
         String afterAtSymbol = email.substring(atSymbolIndex + 1);
-        if (afterAtSymbol.indexOf('.') == -1 || afterAtSymbol.indexOf('.') == afterAtSymbol.length() - 1) {
-            return false;
-        }
+        return afterAtSymbol.indexOf('.') != -1 && afterAtSymbol.indexOf('.') != afterAtSymbol.length() - 1;
 
         // All checks passed, the email is valid
-        return true;
     }
     customer(String cus)
     {
