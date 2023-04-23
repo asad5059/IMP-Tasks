@@ -1,3 +1,10 @@
+## Problem Description:
+We are looking to create a Java-based API that will use the Google Drive API to preview files.
+
+Initially, this API will take a spreadsheet file, upload it to Google Drive and return a preview URL in the API response.
+
+The objective is to allow users to preview spreadsheets in Google Sheets using a service account, not individual user oauth accounts.
+
 ## Changelog:
 1. You can now upload any kind of file using this application.
 2. You just need to paste the link of the file that you want to upload in google drive from your local computer.
