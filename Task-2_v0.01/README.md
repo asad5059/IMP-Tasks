@@ -1,0 +1,28 @@
+## Changelog:
+1. You can now upload any kind of file using this application.
+2. You just need to paste the link of the file that you want to upload in google drive from your local computer.
+
+## How to run?
+1. On your Maven pom.xml file add the following lines for integrating the dependencies:
+```xml
+<dependencies>
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.oauth-client</groupId>
+            <artifactId>google-oauth-client-jetty</artifactId>
+            <version>1.34.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-drive</artifactId>
+            <version>v3-rev20220815-2.0.0</version>
+        </dependency>
+    </dependencies>
+```
+2. Under the same Maven project create a java file named DriveUploader.java.
+3. Paste the DriveUploader.java file source code to your newly created DriveUploader.java file.
+4. Save the code and hit run to run the program. 
