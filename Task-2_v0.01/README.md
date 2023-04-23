@@ -26,3 +26,5 @@
 2. Under the same Maven project create a java file named DriveUploader.java.
 3. Paste the DriveUploader.java file source code to your newly created DriveUploader.java file.
 4. Save the code and hit run to run the program. 
+
+Note: Don't forget to save the credential file under the name "credentials.json" inside the "resources" folder of your maven project.
